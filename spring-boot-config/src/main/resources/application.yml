@@ -1,0 +1,29 @@
+#my.greetings = Hello from property file
+#list values
+My:
+  list:
+    values : 1,2,3
+#keyvalue pairs
+DbValues : "{ConnectionString: 'https://mongodb.com', UserName:'Gohul', Password:'pass'}"
+
+
+#IN YML file, we've one feature called nesting. we can see how we're going to implement nesting concept if we've have same  keys
+
+
+#db:
+#  connection : "{ connectionString: 'http://mongodb.com', userName:'gohul', password: 'pass'}"
+#  host : 123.41.12.12
+#  port : 1200
+
+app:
+  name : My App
+  description : welcome to ${app.name}
+
+my:
+  message: Hello from intellij
+management.endpoints.web.exposure.include: "*"
+#spring.profiles.active: test
+
+spring:
+  config:
+    import: configserver:http://localhost:8888
